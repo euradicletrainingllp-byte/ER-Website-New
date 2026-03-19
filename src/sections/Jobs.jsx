@@ -218,14 +218,14 @@ export default function Jobs() {
       {selectedRole &&
         createPortal(
           <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-6 py-6"
+            className="fixed inset-0 bg-black/50 flex items-start sm:items-center justify-center z-50 px-3 sm:px-6 py-4 sm:py-6 overflow-y-auto"
             onClick={() => {
               setSelectedRole(null);
               setIsPdfExpanded(false);
             }}
           >
             <div
-              className="bg-[var(--color-bg-white)] w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] rounded-2xl p-6 md:p-10 xl:p-12 relative shadow-xl flex flex-col max-h-[95vh] overflow-y-auto"
+              className="bg-[var(--color-bg-white)] w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] rounded-2xl p-4 sm:p-6 md:p-8 xl:p-10 relative shadow-xl flex flex-col max-h-[92vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -238,7 +238,7 @@ export default function Jobs() {
                 ×
               </button>
 
-              <div className="grid lg:grid-cols-12 gap-10 xl:gap-14">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 xl:gap-12">
                 <div className="lg:col-span-7 flex flex-col">
                   <h2 className="text-h3 xl:text-[32px] text-[var(--color-primary-navy)] mb-1">
                     {selectedRole.title}
@@ -249,7 +249,7 @@ export default function Jobs() {
                   </p>
 
                   <div
-                    className={`w-full border border-[var(--color-primary-mauve)] rounded-xl overflow-hidden transition-all duration-500 h-[65vh]`}
+                    className="w-full border border-[var(--color-primary-mauve)] rounded-xl overflow-hidden h-[40vh] sm:h-[50vh] lg:h-[65vh]"
                   >
                     <iframe
                       src={selectedRole.pdfPath}
@@ -259,8 +259,8 @@ export default function Jobs() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 flex flex-col justify-start pt-2">
-                  <div className="bg-gray-50/50 p-6 xl:p-8 rounded-2xl border border-gray-100">
+                <div className="lg:col-span-5 flex flex-col justify-start pt-0 lg:pt-2">
+                  <div className="bg-gray-50/50 p-4 sm:p-6 xl:p-8 rounded-2xl border border-gray-100">
                     <h4 className="text-lg font-semibold text-[var(--color-primary-navy)] mb-6">
                       Apply for this position
                     </h4>
@@ -277,7 +277,7 @@ export default function Jobs() {
                       </div>
                     )}
 
-                    <form className="space-y-5" onSubmit={handleSubmit}>
+                    <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
                       <input
                         type="text"
                         name="fullName"
@@ -285,7 +285,7 @@ export default function Jobs() {
                         onChange={handleChange}
                         placeholder="Full Name"
                         required
-                        className="w-full border border-gray-300 rounded-xl px-4 py-3.5 bg-white"
+                        className="w-full border border-gray-300 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 bg-white text-sm sm:text-base"
                       />
 
                       <input
@@ -308,7 +308,7 @@ export default function Jobs() {
                         className="w-full border border-gray-300 rounded-xl px-4 py-3.5 bg-white"
                       />
 
-                      <label className="w-full flex items-center justify-between border border-dashed border-gray-400 rounded-xl px-4 py-3.5 bg-white cursor-pointer">
+                      <label className="w-full flex items-center justify-between border border-dashed border-gray-400 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 bg-white cursor-pointer text-sm sm:text-base">
                         <span className="text-gray-500 text-sm">
                           Upload Resume (PDF/DOC)
                         </span>
@@ -328,7 +328,7 @@ export default function Jobs() {
                       <button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-[var(--color-primary-mauve)] text-white py-4 rounded-xl font-bold tracking-wide hover:shadow-lg"
+                        className="w-full bg-[var(--color-primary-mauve)] text-white py-3 sm:py-4 rounded-xl font-semibold sm:font-bold text-sm sm:text-base tracking-wide hover:shadow-lg"
                       >
                         {loading ? "Submitting..." : "SUBMIT APPLICATION"}
                       </button>
