@@ -228,7 +228,7 @@ export default function Story1() {
         <button
           onClick={() => navigate(-1)}
           className="mb-10 px-6 py-2 border border-primary-mauve text-primary-mauve hover:bg-mauve hover:text-black transition-all duration-300 rounded-md"
-        >
+>
           ← Back
         </button>
 

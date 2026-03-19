@@ -227,7 +227,7 @@ export default function Story1() {
       <div className="container mx-auto px-6 md:px-12 py-4">
         <button
           onClick={() => navigate(-1)}
-          className="mb-10 px-6 py-2 border border-mauve text-mauve hover:bg-mauve hover:text-white transition-all duration-300 rounded-md"
+                    className="mb-10 px-6 py-2 border border-primary-mauve text-primary-mauve hover:bg-mauve hover:text-black transition-all duration-300 rounded-md"
         >
           ← Back
         </button>
