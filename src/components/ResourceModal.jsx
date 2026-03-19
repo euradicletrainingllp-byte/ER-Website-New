@@ -223,7 +223,7 @@ export default function ResourcesModal({ modalType, closeModal }) {
     >
       <div
         ref={modalContentRef}
-        className="bg-white w-full max-w-lg rounded-2xl p-8 shadow-2xl relative"
+        className="bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl p-5 sm:p-6 md:p-8 shadow-2xl relative"
       >
         <button
           onClick={handleClose}
@@ -250,14 +250,14 @@ export default function ResourcesModal({ modalType, closeModal }) {
           </div>
         )}
         {modalType === "brochure" && step === "form" && (
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
             <input
               type="text"
               required
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
             />
 
             <input
@@ -298,7 +298,7 @@ export default function ResourcesModal({ modalType, closeModal }) {
         )}
 
         {modalType === "brochure" && step === "otp" && (
-          <form className="space-y-5" onSubmit={handleVerifyOtp}>
+          <form className="space-y-4 sm:space-y-5" onSubmit={handleVerifyOtp}>
             <input
               type="text"
               required
@@ -319,7 +319,7 @@ export default function ResourcesModal({ modalType, closeModal }) {
         )}
 
         {view === "certificate" && (
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
             <input
               type="text"
               required
@@ -358,7 +358,7 @@ export default function ResourcesModal({ modalType, closeModal }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 rounded-lg text-white font-semibold uppercase tracking-wide bg-primary-purple"
+              className="w-full py-2.5 sm:py-3 rounded-lg text-white text-sm sm:text-base font-semibold uppercase tracking-wide bg-primary-purple"
             >
               {loading ? "Checking..." : "Download"}
             </button>
@@ -366,59 +366,62 @@ export default function ResourcesModal({ modalType, closeModal }) {
         )}
 
         {view === "missing-certificate" && (
-          <form className="space-y-5" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              required
-              placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
+          <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                required
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+              <input
+                type="text"
+                required
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+            </div>
 
-            <input
-              type="text"
-              required
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                required
+                placeholder="Program Attended"
+                value={programAttended}
+                onChange={(e) => setProgramAttended(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+              <input
+                type="date"
+                required
+                value={programDate}
+                onChange={(e) => setProgramDate(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+            </div>
 
-            <input
-              type="text"
-              required
-              placeholder="Program Attended"
-              value={programAttended}
-              onChange={(e) => setProgramAttended(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
-
-            <input
-              type="date"
-              required
-              value={programDate}
-              onChange={(e) => setProgramDate(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
-
-            <input
-              type="text"
-              required
-              placeholder="Organisation"
-              value={organisation}
-              onChange={(e) => setOrganisation(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
-
-            <input
-              type="text"
-              required
-              placeholder="Department"
-              value={department}
-              onChange={(e) => setDepartment(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                required
+                placeholder="Organisation"
+                value={organisation}
+                onChange={(e) => setOrganisation(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+              <input
+                type="text"
+                required
+                placeholder="Department"
+                value={department}
+                onChange={(e) => setDepartment(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+            </div>
 
             <input
               type="text"
@@ -426,26 +429,27 @@ export default function ResourcesModal({ modalType, closeModal }) {
               placeholder="Designation"
               value={designation}
               onChange={(e) => setDesignation(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
             />
 
-            <input
-              type="email"
-              required
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
-
-            <input
-              type="text"
-              required
-              placeholder="Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-4 py-3"
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="email"
+                required
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+              <input
+                type="text"
+                required
+                placeholder="Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 sm:px-4 sm:py-3 text-sm sm:text-base"
+              />
+            </div>
 
             <textarea
               required
@@ -458,7 +462,7 @@ export default function ResourcesModal({ modalType, closeModal }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 rounded-lg text-white font-semibold uppercase tracking-wide bg-primary-purple"
+              className="w-full py-2.5 sm:py-3 rounded-lg text-white text-sm sm:text-base font-semibold uppercase tracking-wide bg-primary-purple"
             >
               {loading ? "Submitting..." : "Submit Request"}
             </button>
