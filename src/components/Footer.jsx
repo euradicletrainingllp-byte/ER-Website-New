@@ -18,14 +18,14 @@ export default function Footer() {
     >
       <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 2xl:gap-12">
         
-        <div className="lg:col-span-3 flex flex-col justify-between items-center 2xl:items-start space-y-12 2xl:space-y-16">
-          <div className="space-y-8">
+        <div className="lg:col-span-3 flex flex-col justify-between items-center lg:items-start space-y-8 sm:space-y-10 lg:space-y-12">
+          <div className="space-y-6 sm:space-y-8">
             <img
               src="/Home/logo.gif"
               alt="EuRadicle Logo"
               className="w-auto h-28 md:h-32 2xl:h-36 object-contain"
             />
-            <div className="flex gap-5 2xl:gap-6 text-xl 2xl:text-2xl text-primary-navy/80">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-5 text-lg sm:text-xl text-primary-navy/80">
               <a href="https://www.linkedin.com/company/euradicle-training-india/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-brand-400/20 hover:bg-white hover:text-[var(--color-primary-mauve)] transition-all duration-300">
                 <FaLinkedinIn />
               </a>
