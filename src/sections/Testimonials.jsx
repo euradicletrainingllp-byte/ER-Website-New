@@ -60,6 +60,7 @@ const TestimonialCard = ({ data }) => {
 const MarqueeRow = ({ items }) => {
   const scrollRef = React.useRef(null);
   const isHovering = React.useRef(false);
+  const isTouching = React.useRef(false);
 
   React.useEffect(() => {
     const el = scrollRef.current;
@@ -68,8 +69,8 @@ const MarqueeRow = ({ items }) => {
     let animationFrame;
 
     const autoScroll = () => {
-      if (!isHovering.current) {
-        el.scrollLeft += 3.5;
+      if (!isHovering.current && !isTouching.current) {
+        el.scrollLeft += 1.2;
         if (el.scrollLeft >= el.scrollWidth / 2) {
           el.scrollLeft = 0;
         }
@@ -89,7 +90,10 @@ const MarqueeRow = ({ items }) => {
         ref={scrollRef}
         onMouseEnter={() => (isHovering.current = true)}
         onMouseLeave={() => (isHovering.current = false)}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2"
+        onTouchStart={() => (isTouching.current = true)}
+        onTouchEnd={() => (isTouching.current = false)}
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2 touch-pan-x"
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
         {[...items, ...items].map((item, idx) => (
           <TestimonialCard key={idx} data={item} />
