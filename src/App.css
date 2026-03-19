@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import "tailwindcss";
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-Italic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-SemiBold.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-SemiBoldItalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bergen Text";
+  src: url("/Fonts/bergen-text-2022-02-08-22-29-28-utc/BergenText-BoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@theme {
+  --color-bg-dark: #28272c;
+  --color-bg-muted: #f2f2f2;
+  --color-bg-white: #ffffff;
+  --color-primary-navy: #2d3047;
+  --color-primary-purple: #3e3264;
+  --color-primary-mauve: #aa78a6;
+  --color-brand-900: #2d3047;
+  --color-brand-800: #4e4865;
+  --color-brand-700: #736184;
+  --color-brand-600: #9b7ba1;
+  --color-brand-500: #c696bd;
+  --color-brand-400: #8fa3cb;
+  --font-decorative: "Hergola", sans-serif;
+  --font-heading: "Bergen Text", sans-serif;
+  --font-body: "Source Sans Pro", sans-serif;
+  --background-image-gradient-main: linear-gradient(
+    to bottom right,
+    #aa78a6,
+    #3e3264
+  );
+  --background-image-gradient-accent: linear-gradient(
+    to bottom right,
+    #aa78a6,
+    #9c9ed4
+  );
+}
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-white);
+  color: var(--color-primary-navy);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text-h1 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 3rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+.text-h2 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.text-h3 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.text-h4 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.text-h5 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.text-h6 {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.text-subheading-lg {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.text-subheading {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.text-subheading-sm {
+  font-family: "Bergen Text", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.text-body-lg {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+.text-body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.text-body-sm {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.text-body-xs {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.text-decorative-lg {
+  font-family: "Hergola", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+.text-decorative {
+  font-family: "Hergola", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+}
