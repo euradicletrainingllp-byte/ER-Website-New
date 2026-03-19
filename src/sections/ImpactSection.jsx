@@ -9,7 +9,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function ImpactSection() {
   const sectionRef = useRef(null);
 
-  useGSAP( 
+  useGSAP(
     () => {
       const ctx = gsap.context(() => {
         const counters = gsap.utils.toArray(".counter");
@@ -20,11 +20,11 @@ function ImpactSection() {
 
           gsap.to(obj, {
             value: target,
-            duration: 2,
+            duration: 1.8,
             ease: "power2.out",
             scrollTrigger: {
               trigger: counter,
-              start: "top 85%",
+              start: "top 90%",
               once: true,
             },
             onUpdate: () => {
@@ -42,47 +42,45 @@ function ImpactSection() {
   const stats = [
     { label: "Projects", value: Impact.speedometer.Projects },
     { label: "Clients", value: Impact.speedometer.Clients },
-    { label: "Professionals Trained", value: Impact.speedometer.Professionals_Trained },
+    {
+      label: "Professionals Trained",
+      value: Impact.speedometer.Professionals_Trained,
+    },
   ];
 
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[var(--color-bg-muted)] py-14 px-4 max-[600px]:py-12 max-[600px]:px-5 min-[600px]:py-16 min-[600px]:px-6 min-[768px]:py-18 min-[768px]:px-8 min-[992px]:py-20 min-[992px]:px-10"
+      className="w-full bg-[var(--color-bg-muted)] py-12 sm:py-14 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-10"
     >
-      <div className="max-w-[95%] min-[600px]:max-w-2xl min-[768px]:max-w-3xl min-[992px]:max-w-5xl mx-auto text-center">
-        <h1 className="text-h1 normal-case mb-2 text-[clamp(28px,5vw,56px)] leading-tight">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="mb-3 text-[clamp(26px,4.5vw,54px)] leading-tight font-medium">
           <span className="text-[var(--color-primary-navy)]">
             Our Impact at a{" "}
           </span>
           <span className="text-[var(--color-primary-mauve)]">Glance</span>
         </h1>
 
-        <p className="italic text-body-lg text-[var(--color-primary-navy)] max-w-full min-[600px]:max-w-xl min-[768px]:max-w-2xl min-[992px]:max-w-3xl mx-auto mb-10 min-[600px]:mb-12 min-[768px]:mb-14 text-[clamp(14px,2.5vw,20px)] leading-relaxed">
-          The impact of people development shows up over time in decisions made, teams strengthened and organisational cultures shaped.
+        <p className="italic text-[var(--color-primary-navy)] opacity-80 mx-auto mb-10 sm:mb-12 md:mb-14 max-w-xs sm:max-w-lg md:max-w-2xl text-[clamp(13px,2.2vw,18px)] leading-relaxed">
+          The impact of people development shows up over time in decisions made,
+          teams strengthened and organisational cultures shaped.
         </p>
 
-        <div className="grid grid-cols-1 min-[600px]:grid-cols-2 min-[768px]:grid-cols-3 gap-8 min-[768px]:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-y-10 sm:gap-y-12 md:gap-y-14 gap-x-6 md:gap-x-10">
           {stats.map((stat) => {
             const numericValue = parseInt(stat.value.replace(/\D/g, ""), 10);
             const hasPlus = stat.value.includes("+");
 
             return (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="text-h1 text-[var(--color-primary-purple)] text-[clamp(32px,6vw,64px)] leading-none">
-                  <span
-                    className="counter"
-                    data-target={numericValue}
-                  >
+              <div key={stat.label} className="flex flex-col items-center">
+                <div className="text-[clamp(34px,6vw,64px)] font-semibold text-[var(--color-primary-purple)] leading-none">
+                  <span className="counter" data-target={numericValue}>
                     0
                   </span>
                   {hasPlus && "+"}
                 </div>
 
-                <div className="text-h5 text-[var(--color-primary-mauve)] mt-2 min-[600px]:mt-3 text-[clamp(16px,2.5vw,24px)]">
+                <div className="mt-2 sm:mt-3 text-[clamp(15px,2.2vw,22px)] font-medium text-[var(--color-primary-mauve)] text-center max-w-[200px] sm:max-w-none">
                   {stat.label}
                 </div>
               </div>
