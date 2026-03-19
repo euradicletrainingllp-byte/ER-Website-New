@@ -70,7 +70,7 @@ const Showreel = () => {
           playsInline
           className="w-full h-full object-cover rounded-xl"
         >
-          <source src="Activity 2.mp4" type="video/mp4" />
+          <source src="Activity.mp4" type="video/mp4" />
         </video>
       </div>
     </section>
