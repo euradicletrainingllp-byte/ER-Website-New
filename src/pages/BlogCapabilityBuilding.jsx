@@ -4,7 +4,7 @@ function BlogCapabilityBuilding() {
   return (
     <BlogLayout
       title="FROM TRAINING PROGRAMS TO CAPABILITY BUILDING: WHAT ORGANIZATIONS MUST RETHINK"
-      subtitle="Why organizations must move beyond training programs to build real capability."
+      subtitle="Why organizations must move beyond training programs to build real capability?"
       date="Jul 31, 2025"
       category="News"
       image="/Home/compressed-blog2.png"
@@ -128,7 +128,7 @@ function BlogCapabilityBuilding() {
       </p>
 
       <h2 className="text-2xl font-semibold text-[var(--color-primary-mauve)]">
-        Why This Rethink Is Urgent Now
+        Why This Rethink Is Urgent Now?
       </h2>
 
       <p>

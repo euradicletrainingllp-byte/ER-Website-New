@@ -106,9 +106,9 @@ function BlogLayout({
     <section>
       <section
         ref={containerRef}
-        className="relative w-full min-h-screen bg-[var(--color-bg-white)] pt-32 pb-24 px-6 mt-25"
+        className="relative w-full min-h-screen bg-[var(--color-bg-white)] pt-[100px] sm:pt-[110px] md:pt-[120px] pb-44 md:pb-44 px-4 sm:px-6"
       >
-        <div className="absolute top-[-20px] left-0 w-full h-[60vh] overflow-hidden">
+        <div className="absolute top-[80px] left-0 w-full h-[50vh] sm:h-[55vh] md:h-[60vh] overflow-hidden">
           <img
             src={image}
             alt="Blog Hero"
@@ -117,8 +117,8 @@ function BlogLayout({
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="bg-white rounded-[40px] px-10 md:px-16 py-8 shadow-xl relative z-10 -mt-[20vh]">
+        <div className="relative top-40 md:top-35 max-w-5xl mx-auto">
+          <div className="bg-white rounded-[28px] sm:rounded-[32px] md:rounded-[40px] px-5 sm:px-8 md:px-16 py-6 sm:py-8 shadow-xl relative z-10 -mt-[12vh] sm:-mt-[16vh] md:-mt-[18vh]">
             <Link
               to="/"
               state={{ scrollTo: "blogs" }}
@@ -129,7 +129,7 @@ function BlogLayout({
 
             <div className="blog-meta flex items-center gap-4 mb-2"></div>
 
-            <h1 className="blog-title text-4xl md:text-5xl font-semibold text-[var(--color-primary-navy)] leading-tight">
+            <h1 className="blog-title text-2xl sm:text-3xl md:text-5xl font-semibold text-[var(--color-primary-navy)] leading-tight">
               {title}
             </h1>
 
@@ -142,7 +142,7 @@ function BlogLayout({
                 ref={heroRef}
                 src={image}
                 alt="Blog"
-                className="w-full h-[420px] object-cover transition-transform duration-500"
+                className="w-full h-[240px] sm:h-[320px] md:h-[420px] object-cover transition-transform duration-500"
               />
             </div>
 

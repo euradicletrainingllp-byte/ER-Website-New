@@ -29,7 +29,7 @@ const TestimonialCard = ({ data }) => {
       <div className="mt-auto pt-4 border-t border-bg-muted flex items-center justify-between gap-3">
         <div className="flex flex-col">
           <span className="text-primary-navy text-xs sm:text-sm font-medium">
-            {isParticipantVoice ? "Participant Voice" : data.by}
+            {isParticipantVoice ? "Participant's Voice" : data.by}
           </span>
 
           {!isParticipantVoice && (

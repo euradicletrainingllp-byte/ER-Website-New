@@ -4,7 +4,7 @@ function BlogPsychologicalSafety() {
   return (
     <BlogLayout
       title="PSYCHOLOGICAL SAFETY, TRUST, AND PERFORMANCE: THE CAPABILITY CONNECTION"
-      subtitle="Why trust and psychological safety function as performance accelerators."
+      subtitle="Why trust and psychological safety function as performance accelerators?"
       // date="Aug 4, 2025"
       category="News"
       image="/Home/blog3.jpeg"
@@ -70,7 +70,7 @@ function BlogPsychologicalSafety() {
       </p>
 
       <h2 className="text-2xl font-semibold text-[var(--color-primary-mauve)]">
-        Why Most Organizations Misdiagnose the Problem
+        Why Most Organizations Misdiagnose the Problem?
       </h2>
 
       <p>
