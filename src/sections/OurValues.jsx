@@ -145,7 +145,7 @@ export default function OurValues() {
         </div>
 
         <div className="flex flex-col md:grid md:grid-cols-[1fr_clamp(220px,28vw,340px)_1fr] items-center mt-8">
-          <div className="flex flex-row md:flex-col gap-6 md:gap-24 items-center order-1 lg:order-none">
+          <div className="flex flex-row md:flex-col gap-6 md:gap-24 items-center justify-between w-full px-2 order-1 lg:order-none">
             <div ref={setRef("cardE")} className={animBase}>
               <ValueItem letter="E" label="Expertise" color="#2d3047" />
             </div>
@@ -165,7 +165,7 @@ export default function OurValues() {
             />
           </div>
 
-          <div className="flex flex-row md:flex-col gap-6 md:gap-24 items-center justify-between mt-4 md:mt-0 order-3 lg:order-none">
+          <div className="flex flex-row md:flex-col gap-6 md:gap-24 items-center justify-between w-full px-2 mt-4 md:mt-0 order-3 lg:order-none">
             <div ref={setRef("cardI")} className={animBase}>
               <ValueItem letter="I" label="Impact" color="#736184" />
             </div>
