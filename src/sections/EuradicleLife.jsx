@@ -53,7 +53,7 @@ export default function EuradicleLife() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-12 gap-5 xl:gap-6 2xl:gap-7 auto-rows-[260px] lg:auto-rows-[320px] xl:auto-rows-[360px] 2xl:auto-rows-[400px]">
+        <div className="hidden md:grid grid-cols-12 gap-5 xl:gap-6 2xl:gap-7 auto-rows-[120px] lg:auto-rows-[200px] xl:auto-rows-[220px] 2xl:auto-rows-[240px]">
           <div className="col-span-7 row-span-2 overflow-hidden rounded-3xl life-animate">
             <img
               src={images[1]}
@@ -70,7 +70,7 @@ export default function EuradicleLife() {
               alt=""
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 object-top"
             />
           </div>
 
