@@ -106,7 +106,7 @@ function BlogLayout({
     <section>
       <section
         ref={containerRef}
-        className="relative w-full min-h-screen bg-[var(--color-bg-white)] pt-[100px] sm:pt-[110px] md:pt-[120px] pb-20 md:pb-24 px-4 sm:px-6"
+        className="relative w-full min-h-screen bg-[var(--color-bg-white)] pt-[100px] sm:pt-[110px] md:pt-[120px] pb-44 md:pb-44 px-4 sm:px-6"
       >
         <div className="absolute top-[80px] left-0 w-full h-[50vh] sm:h-[55vh] md:h-[60vh] overflow-hidden">
           <img
