@@ -45,8 +45,14 @@ function CommercialSalesEnablement() {
         },
         {
           heading: "Channel & Retail Effectiveness",
-          description:
-            "Strong channels deliver strong results. We enhance coordination and ownership across distributors and retailers, driving visibility, reach, and measurable from Ground impact.",
+          description: (
+            <>
+              Strong channels deliver strong results. We enhance coordination
+              and ownership across distributors and retailers, driving
+              visibility, reach, and measurable from{" "}
+              <span className="whitespace-nowrap">on-ground impact.</span>
+            </>
+          ),
         },
         {
           heading: "Key Account Management Excellence",

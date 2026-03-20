@@ -52,9 +52,9 @@ const LeaderStory ={
   subtag: "A curated leadership experience designed to build clarity, judgement, and readiness for responsible AI adoption.",
   paras: [
   "As AI continues to reshape industries, particularly in highly regulated and decision-intensive sectors, senior leaders are increasingly required to take informed positions on AI, often without the time or space to fully explore its implications. EuRadicle designed this leadership pathway to help leaders build clarity, confidence, and perspective while navigating AI-led change.",
-  "Rewrite - The engagement focused on AI as a leadership and decision-making challenge, not as a technology topic. Through contextual discussions and real-world scenarios drawn from the financial services environment, leaders explored how AI influences strategy, risk, ethics, governance, and organizational culture.",
+  "The engagement focused on AI as a leadership and decision-making challenge, not as a technology topic. Through contextual discussions and real-world scenarios drawn from the financial services environment, leaders explored how AI influences strategy, risk, ethics, governance, and organizational culture.",
   "As part of this pathway, EuRadicle recently delivered a customized leadership intervention for senior leaders that centered on building AI awareness, interpretability, and decision confidence. The learning journey combined virtual and in-person experiences and was shaped entirely around the organization’s industry context and leadership realities.",
-  "What set this engagement apart was EuRadicle’s deep customization approach. Case studies, scenarios, and discussions were tailored to the organization’s operating environment, regulatory landscape, and participant roles, ensuring relevance, depth, and application without unnecessary technical complexity.",
+  "What set this engagement apart was EuRadicle’s deep customization approach? Case studies, scenarios, and discussions were tailored to the organization’s operating environment, regulatory landscape, and participant roles, ensuring relevance, depth, and application without unnecessary technical complexity.",
 ],
 outcomes : [
   "Clearer understanding of AI concepts and their relevance to leadership decisions",

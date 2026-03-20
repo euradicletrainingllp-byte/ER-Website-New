@@ -54,7 +54,7 @@ function BlogPowerSkills() {
       </p>
 
       <h2 className="text-2xl font-semibold text-[var(--color-primary-mauve)]">
-        Why power skills function as leadership currency
+        Why power skills function as leadership currency?
       </h2>
 
       <p>
