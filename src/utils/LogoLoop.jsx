@@ -237,7 +237,7 @@ export const LogoLoop = memo(
           '[--logoloop-logoHeight:28px]',
           '[--logoloop-fadeColorAuto:#ffffff]',
           'dark:[--logoloop-fadeColorAuto:#0b0b0b]',
-          scaleOnHover && 'py-[calc(var(--logoloop-logoHeight)*0.1)]',
+          scaleOnHover && 'py-[calc(var(--logoloop-logoHeight)*0.05)]',
           className
         ),
       [isVertical, scaleOnHover, className]
@@ -375,7 +375,7 @@ export const LogoLoop = memo(
     return (
       <div
         ref={containerRef}
-        className={rootClasses}
+        className={`px-10 ${rootClasses}`}
         style={containerStyle}
         role="region"
         aria-label={ariaLabel}

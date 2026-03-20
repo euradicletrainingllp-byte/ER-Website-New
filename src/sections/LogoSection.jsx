@@ -7,7 +7,7 @@ const LogoColumn = ({ logos, direction }) => {
       <LogoLoop
         logos={logos}
         direction={direction}
-        speed={35}
+        speed={25}
         gap={20}
         pauseOnHover
         scaleOnHover
