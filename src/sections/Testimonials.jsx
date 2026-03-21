@@ -1,11 +1,12 @@
 import React from "react";
+import gsap from "gsap";
 import { Testimonials } from "../data/home";
 
 const TestimonialCard = ({ data }) => {
   const isParticipantVoice = !data.by && !data.designation;
 
   return (
-    <div className="testimonial-card snap-x snap-mandatory relative flex-shrink-0 w-[90vw] min-[500px]:w-[75vw] min-[650px]:w-[60vw] min-[800px]:w-full max-w-[480px] min-[800px]:max-w-none bg-bg-white rounded-2xl p-5 sm:p-6 border border-brand-400/20 shadow-[0_10px_30px_-15px_rgba(45,48,71,0.1)] min-h-[460px] flex flex-col gap-3">
+    <div className="testimonial-card snap-x snap-mandatory relative flex-shrink-0 w-full max-w-[480px] min-[800px]:max-w-none bg-bg-white rounded-2xl p-5 sm:p-6 border border-brand-400/20 shadow-[0_10px_30px_-15px_rgba(45,48,71,0.1)] min-h-[460px] flex flex-col gap-3">
       {/* {isParticipantVoice && (
         <img
           src="/ParticipantsVoices.png"
@@ -58,46 +59,131 @@ const TestimonialCard = ({ data }) => {
 };
 
 const MarqueeRow = ({ items }) => {
-  const scrollRef = React.useRef(null);
-  const isHovering = React.useRef(false);
-  const isTouching = React.useRef(false);
+  const trackRef = React.useRef(null);
+  const animating = React.useRef(false);
+  const autoRef = React.useRef(null);
+
+  const gap = 24;
+  const baseItems = items;
+  const loopItems = [...baseItems, ...baseItems, ...baseItems];
+
+  const [cardWidth, setCardWidth] = React.useState(280);
+  const baseIndex = baseItems.length;
+  const [index, setIndex] = React.useState(baseIndex);
+  const [hovering, setHovering] = React.useState(false);
+  const [touchStart, setTouchStart] = React.useState(null);
 
   React.useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    let animationFrame;
-
-    const autoScroll = () => {
-      if (!isHovering.current && !isTouching.current) {
-        el.scrollLeft += 1.2;
-        if (el.scrollLeft >= el.scrollWidth / 2) {
-          el.scrollLeft = 0;
-        }
-      }
-
-      animationFrame = requestAnimationFrame(autoScroll);
+    const handleResize = () => {
+      const width =
+        window.innerWidth < 640
+          ? window.innerWidth * 0.8
+          : window.innerWidth * 0.6;
+      setCardWidth(width);
     };
-
-    animationFrame = requestAnimationFrame(autoScroll);
-
-    return () => cancelAnimationFrame(animationFrame);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  React.useEffect(() => {
+    const totalWidth = cardWidth + gap;
+    gsap.set(trackRef.current, {
+      x: -(index * totalWidth),
+    });
+  }, [cardWidth]);
+
+  const slide = (dir) => {
+    if (animating.current) return;
+    animating.current = true;
+
+    const totalWidth = cardWidth + gap;
+    const next = index + dir;
+
+    gsap.to(trackRef.current, {
+      x: -(next * totalWidth),
+      duration: 0.6,
+      ease: "power2.out",
+      onUpdate: () => {
+        const progress = Math.abs(
+          gsap.getProperty(trackRef.current, "x") / totalWidth,
+        );
+        setIndex(Math.round(progress));
+      },
+      onComplete: () => {
+        let finalIndex = next;
+
+        if (next >= baseItems.length * 2) finalIndex -= baseItems.length;
+        if (next < baseItems.length) finalIndex += baseItems.length;
+
+        if (finalIndex !== next) {
+          gsap.set(trackRef.current, {
+            x: -(finalIndex * totalWidth),
+          });
+          setIndex(finalIndex);
+        }
+
+        animating.current = false;
+      },
+    });
+  };
+
+  React.useEffect(() => {
+    if (hovering) return;
+    autoRef.current = setInterval(() => slide(1), 3500);
+    return () => clearInterval(autoRef.current);
+  }, [hovering, index, cardWidth]);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (!touchStart) return;
+    const touchEnd = e.changedTouches[0].clientX;
+
+    if (touchStart - touchEnd > 50) slide(1);
+    if (touchStart - touchEnd < -50) slide(-1);
+
+    setTouchStart(null);
+  };
+
   return (
-    <div className="relative w-full min-[800px]:hidden py-6">
+    <div className="relative w-full min-[800px]:hidden py-6 overflow-hidden">
       <div
-        ref={scrollRef}
-        onMouseEnter={() => (isHovering.current = true)}
-        onMouseLeave={() => (isHovering.current = false)}
-        onTouchStart={() => (isTouching.current = true)}
-        onTouchEnd={() => (isTouching.current = false)}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2 touch-pan-x"
-        style={{ WebkitOverflowScrolling: "touch" }}
+        className="cursor-grab active:cursor-grabbing"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
-        {[...items, ...items].map((item, idx) => (
-          <TestimonialCard key={idx} data={item} />
-        ))}
+        <div
+          ref={trackRef}
+          className="flex items-center"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
+          style={{
+            gap: `${gap}px`,
+            paddingLeft: `calc(50% - ${cardWidth / 2}px)`,
+            paddingRight: `calc(50% - ${cardWidth / 2}px)`,
+          }}
+        >
+          {loopItems.map((item, i) => {
+            const isActive = i === index;
+
+            return (
+              <div
+                key={i}
+                className="shrink-0 transition-all duration-500"
+                style={{
+                  width: `${cardWidth}px`,
+                  transform: isActive ? "scale(1)" : "scale(0.92)",
+                  opacity: isActive ? 1 : 0.6,
+                }}
+              >
+                <TestimonialCard data={item} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
