@@ -45,7 +45,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 z-0">
         <img
-          src="/Home/hero-poster.jpg"
+          src="Home/Hero section/Hero section pic.webp"
           alt=""
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
             videoLoaded ? "opacity-0" : "opacity-100"
@@ -62,7 +62,7 @@ const Hero = () => {
           onCanPlayThrough={() => setVideoLoaded(true)}
           className="h-full w-full object-cover opacity-0"
         >
-          <source src="/Home/background.mp4" type="video/mp4" />
+          <source src="/Home/Hero section/bgVideo.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/60" />

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -9,6 +9,9 @@ const Showreel = () => {
   const container = useRef(null);
   const videoWrapper = useRef(null);
   const textRef = useRef(null);
+  const videoRef = useRef(null);
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -69,14 +72,25 @@ const Showreel = () => {
         ref={videoWrapper}
         className="relative z-20 overflow-hidden shadow-2xl flex items-center justify-center w-[90%] aspect-video md:w-auto md:aspect-auto"
       >
+        <img
+          src="/Home/Section2/2nd section pic.webp"
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            videoLoaded ? "opacity-0" : "opacity-100"
+          }`}
+        />
+
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
+          onLoadedData={() => setVideoLoaded(true)}
           className="w-full h-full object-cover rounded-xl md:rounded-none"
         >
-          <source src="Activity.mp4" type="video/mp4" />
+          <source src="/Home/Section2/Activity.webm" type="video/mp4" />
         </video>
       </div>
     </section>
