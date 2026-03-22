@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import React, { useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,53 +13,62 @@ const Showreel = () => {
 
   const [videoLoaded, setVideoLoaded] = useState(false);
 
-  useGSAP(() => {
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 800px)", () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top top+=30",
-          end: "+=100%",
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-        }
+      mm.add("(min-width: 800px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top top+=30",
+            end: "+=100%",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+          },
+        });
+
+        tl.to(
+          textRef.current,
+          {
+            opacity: 0,
+            y: -100,
+            ease: "power1.inOut",
+          },
+          0,
+        );
+
+        tl.fromTo(
+          videoWrapper.current,
+          {
+            width: "40%",
+            height: "30%",
+            y: "35vh",
+            borderRadius: "24px",
+          },
+          {
+            width: "100%",
+            height: "100%",
+            y: "0vh",
+            borderRadius: "0px",
+            ease: "none",
+          },
+          0,
+        );
       });
 
-      tl.to(textRef.current, {
-        opacity: 0,
-        y: -100,
-        ease: "power1.inOut"
-      }, 0);
-
-      tl.fromTo(videoWrapper.current, 
-        { 
-          width: "40%", 
-          height: "30%", 
-          y: "35vh",
-          borderRadius: "24px",
-        },
-        { 
-          width: "100%", 
-          height: "100%", 
-          y: "0vh",
-          borderRadius: "0px",
-          ease: "none" 
-        }, 
-      0);
-    });
-
-    return () => mm.revert();
-  }, { scope: container });
+      return () => mm.revert();
+    },
+    { scope: container },
+  );
 
   return (
-    <section 
-      ref={container} 
+    <section
+      ref={container}
       className="relative w-full h-[60vh] md:h-screen overflow-hidden bg-bg-white flex flex-col items-center justify-center"
     >
-      <div 
+      <div
         ref={textRef}
         className="absolute top-[5%] md:top-[8%] z-10 w-full text-center pointer-events-none"
       >
@@ -68,7 +77,7 @@ const Showreel = () => {
         </h2>
       </div>
 
-      <div 
+      <div
         ref={videoWrapper}
         className="relative z-20 overflow-hidden shadow-2xl flex items-center justify-center w-[90%] aspect-video md:w-auto md:aspect-auto"
       >
@@ -87,10 +96,14 @@ const Showreel = () => {
           muted
           playsInline
           preload="metadata"
-          onLoadedData={() => setVideoLoaded(true)}
+          onLoadedData={() => {
+            setVideoLoaded(true);
+            videoRef.current?.play().catch(() => {});
+          }}
           className="w-full h-full object-cover rounded-xl md:rounded-none"
         >
-          <source src="/Home/Section2/Activity.webm" type="video/mp4" />
+          <source src="/Activity.mp4" type="video/mp4" />
+          <source src="/Home/Section2/Activity.webm" type="video/webm" />
         </video>
       </div>
     </section>
