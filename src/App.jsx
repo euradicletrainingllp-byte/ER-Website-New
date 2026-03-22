@@ -27,6 +27,8 @@ import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 import Brochures from "./pages/Brochures.jsx";
 import ResourcesModal from "./components/ResourceModal.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import TermsCondition from "./pages/TermsCondition.jsx";
 
 const App = () => {
   const [modalType, setModalType] = useState(null);
@@ -53,6 +55,8 @@ const App = () => {
           <Route path="/blogs/power-skills" element={<BlogPowerSkills />} />
           <Route path="/blogs/ai-ethics" element={<BlogPsychologicalSafety />} />
           <Route path="/blogs/chatai-at" element={<BlogCapabilityBuilding />} />
+          <Route path="/privacy-and-policy" element={<Privacy />} />
+          <Route path="/terms-and-conditions" element={<TermsCondition />} />
           <Route
             path="/capabilities/leadership-development"
             element={<LeadershipDevelopment />}
