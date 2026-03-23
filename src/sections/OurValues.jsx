@@ -136,11 +136,11 @@ export default function OurValues() {
           className={`flex justify-center items-center gap-1 mt-6 ${animBase}`}
         >
           <EpicLetter ch="E" color="#2d3047" tooltip="Expertise" tooltipPos="bot" />
-          <span className="text-primary-mauve text-4xl mt-4">.</span>
+          <span className="text-primary-mauve text-6xl mt-4">.</span>
           <EpicLetter ch="P" color="#3e3264" tooltip="Pioneering Spirit" tooltipPos="bot" />
-          <span className="text-primary-mauve text-4xl mt-4">.</span>
+          <span className="text-primary-mauve text-6xl mt-4">.</span>
           <EpicLetter ch="I" color="#736184" tooltip="Impact" tooltipPos="bot" />
-          <span className="text-primary-mauve text-4xl mt-4">.</span>
+          <span className="text-primary-mauve text-6xl mt-4">.</span>
           <EpicLetter ch="C" color="#9b7ba1" tooltip="Client Centricity" tooltipPos="bot" />
         </div>
 
