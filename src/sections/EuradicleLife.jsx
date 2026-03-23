@@ -50,7 +50,7 @@ export default function EuradicleLife() {
         <div className="w-full flex justify-center life-animate">
           <div className="w-full max-w-5xl overflow-hidden rounded-3xl shadow-lg">
             <img
-              src="/public/Life-at-Euradicle.png"  // 👈 replace with your file name
+              src="/Life-at-Euradicle.png"  // 👈 replace with your file name
               alt="Life at Euradicle"
               loading="lazy"
               decoding="async"
