@@ -58,10 +58,37 @@ const Showreel = () => {
         );
       });
 
+      mm.add("(max-width: 799px)", () => {
+        gsap.from(videoWrapper.current, {
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: videoWrapper.current,
+            start: "top 85%",   // animation starts when video enters screen
+            toggleActions: "play none none none",
+          },
+        });
+
+        gsap.from(textRef.current, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        });
+      });
+
       return () => mm.revert();
     },
     { scope: container },
   );
+
 
   return (
     <section
@@ -79,15 +106,17 @@ const Showreel = () => {
 
       <div
         ref={videoWrapper}
-        className="relative z-20 overflow-hidden shadow-2xl flex items-center justify-center w-[90%] aspect-video md:w-auto md:aspect-auto"
+        className="relative z-20 overflow-hidden shadow-2xl flex items-center justify-center 
+        w-[92%] max-w-[600px] aspect-video 
+        md:w-auto md:max-w-none md:aspect-auto"
       >
-        <img
+        {/* <img
           src="/Home/Section2/2nd section pic.webp"
           alt=""
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             videoLoaded ? "opacity-0" : "opacity-100"
           }`}
-        />
+        /> */}
 
         <video
           ref={videoRef}
@@ -95,15 +124,15 @@ const Showreel = () => {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           onLoadedData={() => {
             setVideoLoaded(true);
             videoRef.current?.play().catch(() => {});
           }}
           className="w-full h-full object-cover rounded-xl md:rounded-none"
         >
-          <source src="/Activity.mp4" type="video/mp4" />
           <source src="/Home/Section2/Activity.webm" type="video/webm" />
+          {/* <source src="/Activity.mp4" type="video/mp4" /> */}
         </video>
       </div>
     </section>

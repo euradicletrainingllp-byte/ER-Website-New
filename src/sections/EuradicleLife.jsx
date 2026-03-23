@@ -5,15 +5,6 @@ import gsap from "gsap";
 export default function EuradicleLife() {
   const sectionRef = useRef(null);
 
-  const images = [
-    "/Celebrations/compressed-celeb3.jpeg",
-    "/Celebrations/Start.jpeg",
-    "/Celebrations/compressed-celeb4.jpg",
-    "/Celebrations/compressed-celeb5.jpg",
-    "/Celebrations/compressed-celeb6.jpg",
-    "/Celebrations/compressed-celeb1.jpeg",
-  ];
-
   useGSAP(
     () => {
       gsap.from(".life-animate", {
@@ -37,6 +28,8 @@ export default function EuradicleLife() {
       className="w-full bg-[var(--color-bg-white)] py-14 sm:py-18 lg:py-24 2xl:py-28 mt-6 max-[660px]:mt-10"
     >
       <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-6 sm:px-8 xl:px-10">
+        
+        {/* Heading */}
         <div className="text-center mb-12 lg:mb-16 2xl:mb-20">
           <h1 className="text-h1 sm:text-h2 lg:text-h1 2xl:text-[56px] font-semibold mb-4 life-animate">
             <span className="text-[var(--color-primary-navy)]">LIFE AT </span>
@@ -53,66 +46,19 @@ export default function EuradicleLife() {
           </p>
         </div>
 
-        <div className="hidden md:grid grid-cols-12 gap-5 xl:gap-6 2xl:gap-7 auto-rows-[120px] lg:auto-rows-[200px] xl:auto-rows-[220px] 2xl:auto-rows-[240px]">
-          <div className="col-span-7 row-span-2 overflow-hidden rounded-3xl life-animate">
+        {/* ✅ SINGLE IMAGE */}
+        <div className="w-full flex justify-center life-animate">
+          <div className="w-full max-w-5xl overflow-hidden rounded-3xl shadow-lg">
             <img
-              src={images[1]}
-              alt=""
+              src="/public/Life-at-Euradicle.png"  // 👈 replace with your file name
+              alt="Life at Euradicle"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-
-          <div className="col-span-5 overflow-hidden rounded-3xl life-animate">
-            <img
-              src={images[3]}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 object-top"
-            />
-          </div>
-
-          <div className="col-span-5 overflow-hidden rounded-3xl life-animate">
-            <img
-              src={images[0]}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-
-          <div className="col-span-12 row-span-2 overflow-hidden rounded-3xl life-animate">
-            <img
-              src={images[2]}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-
-          <div className="col-span-4 row-span-2 overflow-hidden rounded-3xl life-animate">
-            <img
-              src={images[4]}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
-          <div className="col-span-8 row-span-2 overflow-hidden rounded-3xl life-animate">
-            <img
-              src={images[5]}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="w-full h-auto object-cover transform scale-100 md:scale-90 transition-transform duration-700 hover:scale-95"
             />
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -54,7 +54,7 @@ const LeaderStory ={
   "As AI continues to reshape industries, particularly in highly regulated and decision-intensive sectors, senior leaders are increasingly required to take informed positions on AI, often without the time or space to fully explore its implications. EuRadicle designed this leadership pathway to help leaders build clarity, confidence, and perspective while navigating AI-led change.",
   "The engagement focused on AI as a leadership and decision-making challenge, not as a technology topic. Through contextual discussions and real-world scenarios drawn from the financial services environment, leaders explored how AI influences strategy, risk, ethics, governance, and organizational culture.",
   "As part of this pathway, EuRadicle recently delivered a customized leadership intervention for senior leaders that centered on building AI awareness, interpretability, and decision confidence. The learning journey combined virtual and in-person experiences and was shaped entirely around the organization’s industry context and leadership realities.",
-  "What set this engagement apart was EuRadicle’s deep customization approach? Case studies, scenarios, and discussions were tailored to the organization’s operating environment, regulatory landscape, and participant roles, ensuring relevance, depth, and application without unnecessary technical complexity.",
+  "What set this engagement apart was EuRadicle’s deep customization approach. Case studies, scenarios, and discussions were tailored to the organization’s operating environment, regulatory landscape, and participant roles, ensuring relevance, depth, and application without unnecessary technical complexity.",
 ],
 outcomes : [
   "Clearer understanding of AI concepts and their relevance to leadership decisions",
@@ -112,7 +112,7 @@ const Testimonials = [
   {
     org: "Ashiana Housing Limited",
     logoUrl: "logos/11.png",
-    by: "Surbhi Dewaan",
+    by: "Participant’s Voice",
     designation: "Vice President & Head HR",
     testimonial:
       "What truly sets EuRadicle apart is not just the breadth of its programs-from FTM and negotiation to delegation and customer service-but the depth of customization and ownership they bring to every engagement. Over our six-year association, EuRadicle has consistently approached learning as a long-term capability-building partnership rather than a one-time training intervention. The sustained Net Promoter Score of 90% reflects the trust, relevance, and measurable impact they have built with our teams over time."
@@ -120,7 +120,7 @@ const Testimonials = [
   {
     org: "LG Electronics Inc.",
     logoUrl: "logos/8.png",
-    by: "Nidhi Kakkar",
+    by: "Participant’s Voice",
     designation: "General Manager L&D & HR",
     testimonial:
       "EuRadicle delivered highly impactful training sessions for our SVC team, enabling a stronger customer-centric mindset and more effective engagement with our customers."
@@ -128,7 +128,7 @@ const Testimonials = [
   {
     org: "Societe Generale Global Solution Centre Private Limited",
     logoUrl: "logos/21.png",
-    by: "Simrat Gahlot",
+    by: "Participant’s Voice",
     designation: "Head Talent Management & Leadership Training",
     testimonial:
       "Participants highly valued the discussion-led approach and personalized focus of the sessions. The facilitators’ contribution to participant development was deeply appreciated and generated strong interest in future interventions. Societe Generale looks forward to continuing its collaboration with EuRadicle."
@@ -136,7 +136,7 @@ const Testimonials = [
   {
     org: "Arcesium LLC",
     logoUrl: "logos/4.png",
-    by: "Rachel Mathew",
+    by: "Participant’s Voice",
     designation: "Senior Manager L&D",
     testimonial:
       "The detailed Program Impact Report clearly demonstrated the tangible outcomes of the initiative and helped build strong leadership buy-in. The sessions were thoughtfully facilitated, with strong rapport established with participants, and supported by seamless logistics and governance that ensured smooth execution. As learning is a continuous journey, we look forward to conducting a refresher in the coming months and to continued engagements with EuRadicle in 2026."
@@ -144,7 +144,7 @@ const Testimonials = [
   {
     org: "Air India Limited",
     logoUrl: "logos/13.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "The session was highly engaging and insightful, with excellent energy brought in by the trainer throughout. The program offered diverse perspectives and interactive activities that made learning both practical and impactful. Complex concepts were simplified effectively using real-life analogies, making them easy to understand and apply at work. The trainer’s passion and delivery style were truly commendable. I walked away with valuable insights and would love even more hands-on practice and peer discussions in future sessions. Overall, an excellent program , I look forward to participating in more such trainings."
@@ -152,7 +152,7 @@ const Testimonials = [
   {
     org: "Almaha Foods International Private Limited",
     logoUrl: "logos/28.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "The training provided a clear and practical understanding of leadership and innovation. The facilitator delivered the concepts with great clarity and energy, making the learning experience both engaging and inspiring. Participants found the session highly valuable and appreciated the motivational approach that made the content relatable and easy to grasp. Overall, it was an excellent learning experience led by a dynamic and impactful trainer."
@@ -160,7 +160,7 @@ const Testimonials = [
   {
     org: "Arvind Limited",
     logoUrl: "logos/32.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "The program created an engaging and motivating learning environment, making concepts easy to understand and apply. Participants valued the practical insights and real-world relevance, and many expressed the need for such trainings to be conducted regularly and extended to more team members. Overall, the experience was insightful, enriching, and highly appreciated."
@@ -168,7 +168,7 @@ const Testimonials = [
   {
     org: "Hindustan Coca Cola Beverages Private Limited",
     logoUrl: "logos/31.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "A highly constructive and informative session, delivered with clarity and strong articulation. Participants appreciated the engaging approach and the relevance of the content and examples to real business contexts. Overall, a valuable and impactful learning experience."
@@ -176,7 +176,7 @@ const Testimonials = [
   {
     org: "Keller Ground Engineering India PVT. LTD.",
     logoUrl: "logos/26.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "A well-structured and thoughtfully designed program that delivered meaningful and practical insights. Participants found the session highly engaging, with interactive activities and clear explanations that deepened their understanding of leadership concepts. The facilitator’s clarity, dedication, and ability to align learning with real workplace needs were especially appreciated. Overall, a powerful and impactful experience that left participants satisfied and better equipped for their professional journey."
@@ -185,7 +185,7 @@ const Testimonials = [
     org: "PeepalCo",
     logoUrl: "/logos/peepalco.svg",
     h: 3,
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "An engaging and well-delivered session that provided practical frameworks directly applicable at work. Participants appreciated the structured approach, constructive insights, and overall clarity of the program. The experience was both valuable and impactful, reinforcing key concepts in a meaningful way."
@@ -193,7 +193,7 @@ const Testimonials = [
   {
     org: "Zscaler Softech India Pvt. Ltd",
     logoUrl: "logos/12.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial:
       "The program delivered a highly beneficial and enjoyable learning experience. Participants described it as a great overall experience and expressed interest in extending the training across the organization. The session was well received, reinforcing its value and positive impact."
@@ -201,7 +201,7 @@ const Testimonials = [
   {
     org: "Pidilite Industries Limited",
     logoUrl: "logos/10.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "The session was well-organized, engaging, and highly relevant to real workplace scenarios. The practical examples and clear demonstrations made the concepts easy to apply. It offered valuable insights into becoming a better manager and leader. I would highly recommend this training and believe it should be conducted regularly."
@@ -209,7 +209,7 @@ const Testimonials = [
   {
     org: "Aditya Birla Management Corporation Private Limited",
     logoUrl: "logos/3.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "The session was highly interactive, well-structured, and professionally delivered. I appreciated the structured frameworks and practical insights that helped me think more like an internal consultant. The content and reference materials were clear and useful, making the learning meaningful and engaging. Overall, it was a great session that added real value"
@@ -217,7 +217,7 @@ const Testimonials = [
   {
     org: "WE Hub Foundation (initiative of the Government of Telangana)",
     logoUrl: "logos/2.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "The workshop truly opened the world of funding for us and made the fundamentals of fundraising much easier to understand and apply. I found the session highly useful, interactive, and well-organized - especially for founders beginning their fundraising journey. It shifted our mindset toward approaching negotiations with greater clarity and helped us realize the importance of having clear ownership of the fundraising process within the team. Overall, it was a very valuable experience, and I only wish we had more time."
@@ -225,7 +225,7 @@ const Testimonials = [
   {
     org: "CISCO Systems India Pvt. Ltd.",
     logoUrl: "logos/23.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "I would describe the experience as well-planned, welcoming, thoughtful, and systematic - brought to life through engaging storytelling. The program was structured in a way that made the learning both meaningful and inspiring. I truly hope we all emerge as transformative leaders after this journey."
@@ -233,7 +233,7 @@ const Testimonials = [
   {
     org: "DBS Technology Services India Private Limited",
     logoUrl: "logos/1.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "The program was well-structured and engaging, and it truly enhanced our skills. The flow of the training was seamless, with practical insights that we could immediately apply. It was a highly valuable experience, and I would confidently recommend it to our teams."
@@ -241,7 +241,7 @@ const Testimonials = [
   {
     org: "Alfred Karcher SE & Co.KG:",
     logoUrl: "logos/6.png",
-    by: "",
+    by: "Participant’s Voice",
     designation: "",
     testimonial: 
     "The culture change programs have left a lasting impact on me and provided pathways to bring alignment within my teams."
