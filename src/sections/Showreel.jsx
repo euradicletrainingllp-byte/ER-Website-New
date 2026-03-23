@@ -110,13 +110,13 @@ const Showreel = () => {
         w-[92%] max-w-[600px] aspect-video 
         md:w-auto md:max-w-none md:aspect-auto"
       >
-        {/* <img
+        <img
           src="/Home/Section2/2nd section pic.webp"
           alt=""
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
             videoLoaded ? "opacity-0" : "opacity-100"
           }`}
-        /> */}
+        />
 
         <video
           ref={videoRef}
