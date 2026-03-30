@@ -19,10 +19,10 @@ const LogoColumn = ({ logos, direction }) => {
 };
 
 const LogoSection = () => {
-  const totalLogos = 33;
+ const totalLogos = 33;
 
-  const indices = Array.from({ length: totalLogos }, (_, i) => i + 1).filter(
-    (i) => i !== 18 && i !== 19 && i !== 31);
+ const indices = Array.from({ length: totalLogos }, (_, i) => i + 1)
+   .filter((i) => ![18, 19, 31].includes(i));
   );
 
   const buildLogos = (arr) =>
