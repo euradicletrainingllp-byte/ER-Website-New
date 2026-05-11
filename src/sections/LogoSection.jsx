@@ -3,7 +3,7 @@ import LogoLoop from "../utils/LogoLoop";
 
 const LogoColumn = ({ logos, direction }) => {
   return (
-    <div className="relative h-[320px] sm:h-[360px] md:h-[420px] lg:h-[480px] overflow-hidden">
+    <div className="relative h-[380px] sm:h-[440px] md:h-[520px] lg:h-[580px] overflow-hidden py-4">
       <LogoLoop
         logos={logos}
         direction={direction}
@@ -19,7 +19,7 @@ const LogoColumn = ({ logos, direction }) => {
 };
 
 const LogoSection = () => {
-  const totalLogos = 33;
+  const totalLogos = 34;
 
   const indices = Array.from({ length: totalLogos }, (_, i) => i + 1).filter(
     (i) => i !== 18 && i !== 19 && i !== 31
@@ -32,7 +32,7 @@ const LogoSection = () => {
           src={`/logos/${i}.png`}
           alt={`Partner Logo ${i}`}
           loading="lazy"
-          className="max-w-[100px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px] h-auto object-contain transition-transform duration-300 hover:scale-110"
+          className=" max-w-[100px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px] max-h-[80px] w-auto h-auto object-contain transition-transform duration-300 hover:scale-110"
         />
       ),
     }));
